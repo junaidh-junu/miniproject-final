@@ -113,7 +113,7 @@ def add_course(request):
     form = CourseForm(request.POST or None)
     context = {
         'form': form,
-        'page_title': 'Add Course'
+        'page_title': 'Add Class'
     }
     if request.method == 'POST':
         if form.is_valid():
@@ -181,7 +181,7 @@ def manage_course(request):
     courses = Course.objects.all()
     context = {
         'courses': courses,
-        'page_title': 'Manage Courses'
+        'page_title': 'Manage Class'
     }
     return render(request, "hod_template/manage_course.html", context)
 
